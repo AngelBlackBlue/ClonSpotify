@@ -1,4 +1,5 @@
 ---
+import Greeting from '../components/Greeting.svelte';
 import PlayListItemCard from '../components/PlayListItemCard.astro';
 import Layout from '../layouts/Layout.astro';
 import { playlists } from '../lib/data';
@@ -12,16 +13,16 @@ import { playlists } from '../lib/data';
     >    
 
      <div class="relative Z-10 px-6 pt-10">
-         <h1 class="text-4xl">Buenos dias</h1>
+         <Greeting/>
          <div class="flex flex-wrap mt-6 gap-4">
              { playlists.map((playlist) => <PlayListItemCard playlist={playlist}/>)         }
          </div>
      </div>
         
-      <!-- <div 
-           class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80"
+      <div 
+           class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 -z-[1]"
       >
-      </div> -->
+      </div>
     	
     </div>
 </Layout>
